@@ -49,6 +49,11 @@ This firmware for the **IR2USB** device is tailored for controlling presentation
 - **Volume Control**: For presentations with embedded audio or video, the remote can include volume up/down control by mapping specific buttons to media keys for adjusting system volume.
 - **Plug-and-Play**: The device appears as a standard USB Human Interface Device (HID) and requires no additional drivers, making setup effortless.
 
+## Customizing the Firmware
+The configuration of the device address and button commands from the infrared remote control to specific actions can be customized in the *config.h* file. This allows the **IR2USB** device to be adapted to work with your chosen remote control for the desired application. Currently, the firmware only supports the **NEC protocol**, which is widely used by most remote controls, particularly the inexpensive ones often found in China-based stores.
+
+If you don't have a suitable remote control, you can also build one yourself. Links to DIY projects for creating your own remote are provided below.
+
 ## Programming and Debugging Device
 To program the CH32V003 microcontroller, you will need a special programming device which utilizes the proprietary single-wire serial debug interface (SDI). The [WCH-LinkE](http://www.wch-ic.com/products/WCH-Link.html) (pay attention to the "E" in the name) is a suitable device for this purpose and can be purchased commercially for around $4. This debugging tool is not only compatible with the CH32V003 but also with other WCH RISC-V and ARM-based microcontrollers.
 
@@ -114,7 +119,9 @@ rvprog -f bin/<firmware>.bin
 - [MCU Templates](https://github.com/wagiminator/MCU-Templates)
 - [MCU Flash Tools](https://github.com/wagiminator/MCU-Flash-Tools)
 - [CH32V003 Datasheets](http://www.wch-ic.com/products/CH32V003.html)
-- [CH32V003 IR Remote Control](https://github.com/wagiminator/CH32V003-IR-Remote)
+- [CH32V003 5-Button IR Remote Control](https://github.com/wagiminator/CH32V003-IR-Remote)
+- [ATtiny13A 5-Button IR Remote Control](https://github.com/wagiminator/ATtiny13-TinyRemote)
+- [ATtiny13A 12-Button IR Remote Control](https://github.com/wagiminator/ATtiny13-TinyRemoteXL)
 
 ![IR2USB_pic2.jpg](https://raw.githubusercontent.com/wagiminator/CH32V003-USB-IR-Receiver/main/documentation/IR2USB_pic2.jpg)
 
